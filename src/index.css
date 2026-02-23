@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 30 10% 15%;
+
+    --card: 40 40% 97%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 40% 97%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 36 77% 49%;
+    --primary-foreground: 40 40% 97%;
+
+    --secondary: 30 30% 90%;
+    --secondary-foreground: 30 10% 25%;
+
+    --muted: 35 20% 91%;
+    --muted-foreground: 30 8% 50%;
+
+    --accent: 30 60% 40%;
+    --accent-foreground: 40 40% 97%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 36 77% 49%;
+
+    --radius: 0.75rem;
+
+    --honey: 36 77% 49%;
+    --honey-light: 42 80% 65%;
+    --honey-dark: 30 70% 35%;
+    --amber: 30 60% 40%;
+    --cream: 40 40% 97%;
+    --forest: 140 25% 30%;
+    --forest-light: 140 20% 45%;
+
+    --sidebar-background: 30 15% 15%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 36 77% 49%;
+    --sidebar-primary-foreground: 40 40% 97%;
+    --sidebar-accent: 30 15% 22%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 30 10% 25%;
+    --sidebar-ring: 36 77% 49%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Source Sans 3', sans-serif;
+  }
+
+  .dark {
+    --background: 30 15% 10%;
+    --foreground: 40 20% 90%;
+    --card: 30 15% 13%;
+    --card-foreground: 40 20% 90%;
+    --popover: 30 15% 13%;
+    --popover-foreground: 40 20% 90%;
+    --primary: 36 77% 49%;
+    --primary-foreground: 40 40% 97%;
+    --secondary: 30 15% 20%;
+    --secondary-foreground: 40 20% 85%;
+    --muted: 30 10% 20%;
+    --muted-foreground: 30 10% 55%;
+    --accent: 36 60% 45%;
+    --accent-foreground: 40 40% 97%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 22%;
+    --input: 30 10% 22%;
+    --ring: 36 77% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .honey-gradient {
+    background: linear-gradient(135deg, hsl(var(--honey)) 0%, hsl(var(--honey-light)) 50%, hsl(var(--honey)) 100%);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, hsla(30, 15%, 10%, 0.4) 0%, hsla(30, 15%, 10%, 0.7) 100%);
+  }
+
+  .section-divider {
+    background: linear-gradient(90deg, transparent, hsl(var(--honey) / 0.4), transparent);
+    height: 1px;
+  }
+
+  .glass-card {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* Alternativna pozadina sekcija – prelom između belih delova */
+  .section-alt {
+    background: hsl(38 25% 94%);
+  }
+
+  .section-warm {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(36 40% 96%) 50%, hsl(var(--background)) 100%);
+  }
+
+}
