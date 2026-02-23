@@ -18,6 +18,7 @@ import AdminProducts from "./pages/AdminProducts";
 import AdminGallery from "./pages/AdminGallery";
 import AdminBlog from "./pages/AdminBlog";
 import AdminMessages from "./pages/AdminMessages";
+import AdminReviews from "./pages/AdminReviews";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,14 @@ const SEOUpdater = () => {
   return null;
 };
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -37,6 +46,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <SEOUpdater />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/o-nama" element={<AboutPage />} />
@@ -50,6 +60,7 @@ const App = () => (
             <Route path="proizvodi" element={<AdminProducts />} />
             <Route path="galerija" element={<AdminGallery />} />
             <Route path="blog" element={<AdminBlog />} />
+            <Route path="recenzije" element={<AdminReviews />} />
             <Route path="poruke" element={<AdminMessages />} />
           </Route>
           <Route path="*" element={<NotFound />} />

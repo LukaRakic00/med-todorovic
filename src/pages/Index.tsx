@@ -6,6 +6,7 @@ import HoneyBenefits from "@/components/HoneyBenefits";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import BeeKeepingTradition from "@/components/BeeKeepingTradition";
 import SaveTheBees from "@/components/SaveTheBees";
+import ReviewsSection from "@/components/ReviewsSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ const Index = () => {
         <FeaturedProducts />
         <BeeKeepingTradition />
         <SaveTheBees />
+        <ReviewsSection />
         <ContactForm />
       </main>
       <Footer />

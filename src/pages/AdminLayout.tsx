@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { useNavigate, Link, Outlet, useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
-import { Package, Image, FileText, MessageSquare, LogOut, Home, Settings } from "lucide-react";
+import { Package, Image, FileText, MessageSquare, Star, LogOut, Home } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 
 const adminLinks = [
   { label: "Proizvodi", path: "/admin/proizvodi", icon: Package },
   { label: "Galerija", path: "/admin/galerija", icon: Image },
   { label: "Blog", path: "/admin/blog", icon: FileText },
+  { label: "Recenzije", path: "/admin/recenzije", icon: Star },
   { label: "Poruke", path: "/admin/poruke", icon: MessageSquare },
 ];
 
