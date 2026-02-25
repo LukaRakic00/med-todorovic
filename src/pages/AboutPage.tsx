@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { motion } from "framer-motion";
 import aboutImg from "@/assets/about-beekeeper.jpg";
 
 const AboutPage = () => {
@@ -12,19 +11,12 @@ const AboutPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.img
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+            <img
               src={aboutImg}
               alt="Pčelar"
               className="rounded-xl shadow-xl w-full object-cover aspect-[4/5]"
             />
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Naša <span className="text-primary">priča</span>
               </h2>
@@ -58,7 +50,7 @@ const AboutPage = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -53,12 +52,7 @@ const ContactForm = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="text-primary font-body text-sm uppercase tracking-[0.3em]">
             Javite nam se
           </span>
@@ -68,14 +62,9 @@ const ContactForm = () => {
           <p className="text-cream/70 font-body text-lg max-w-xl mx-auto">
             Imate pitanja ili želite da naručite? Pišite nam ili nas pozovite.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {/* Kontakt info – brzi pristup */}
           <div className="space-y-6">
             <a
@@ -145,7 +134,7 @@ const ContactForm = () => {
               </form>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

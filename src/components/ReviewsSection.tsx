@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -60,12 +59,7 @@ const ReviewsSection = () => {
   return (
     <section className="py-24 section-alt">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="text-primary font-body text-sm uppercase tracking-[0.3em]">
             Vaše mišljenje nam je važno
           </span>
@@ -75,22 +69,13 @@ const ReviewsSection = () => {
           <p className="font-display text-2xl text-primary font-semibold">
             Šta kažu naši potrošači
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             {displayReviews.map((review, i) => (
-              <motion.div
+              <div
                 key={review.id || i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
                 className="bg-card border border-border rounded-2xl p-6 shadow-lg"
               >
                 <Quote size={32} className="text-primary/40 mb-4" />
@@ -102,16 +87,11 @@ const ReviewsSection = () => {
                   <span className="text-muted-foreground font-body">—</span>
                   <span className="text-muted-foreground font-body">{review.location}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-card border border-border rounded-2xl p-8 shadow-lg"
-          >
+          <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
             <div className="flex items-center gap-3 mb-6">
               <MessageSquare size={28} className="text-primary" />
               <h3 className="font-display text-2xl font-bold text-foreground">
@@ -138,7 +118,7 @@ const ReviewsSection = () => {
                 {loading ? "Slanje..." : "Pošalji recenziju"}
               </Button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

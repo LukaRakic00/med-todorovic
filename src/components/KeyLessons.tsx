@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 const fullText = (
@@ -25,31 +24,17 @@ const KeyLessons = () => {
   return (
     <section className="py-24 section-alt">
       <div className="container mx-auto px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4"
-        >
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4">
           Ključne lekcije
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center text-muted-foreground font-body text-lg mb-16 max-w-2xl mx-auto"
-        >
+        </h2>
+        <p className="text-center text-muted-foreground font-body text-lg mb-16 max-w-2xl mx-auto">
           Tri stuba našeg pristupa pčelarstvu i zdravlju
-        </motion.p>
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {cards.map((card, i) => (
-            <motion.div
+          {cards.map((card) => (
+            <div
               key={card.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: card.delay, duration: 0.5 }}
               className="group relative bg-gradient-to-b from-card to-secondary/30 border border-border rounded-2xl p-8 text-left shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/15 hover:-translate-y-2 hover:border-primary/40 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full transition-colors duration-300 group-hover:bg-primary/10" />
@@ -67,7 +52,7 @@ const KeyLessons = () => {
                   {fullText}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

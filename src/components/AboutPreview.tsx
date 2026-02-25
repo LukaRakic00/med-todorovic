@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import aboutImg from "@/assets/about-beekeeper.jpg";
 
 const AboutPreview = () => {
@@ -6,12 +5,7 @@ const AboutPreview = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div>
             <div className="relative">
               <img
                 src={aboutImg}
@@ -22,14 +16,9 @@ const AboutPreview = () => {
                 25+ godina
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div>
             <span className="text-primary font-body text-sm uppercase tracking-[0.2em]">
               PRODAJA DOMAĆEG MEDA I MEDA SA DODACIMA
             </span>
@@ -39,7 +28,7 @@ const AboutPreview = () => {
             <p className="text-muted-foreground font-body text-lg leading-relaxed">
               Kombinujemo prirodni med sa voćem, orašastim plodovima i začinima. Pogledajte našu ponudu.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

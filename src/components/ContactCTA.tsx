@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -9,12 +8,7 @@ const ContactCTA = () => {
         <div className="honey-gradient w-full h-full" />
       </div>
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-cream mb-6">
             Želite da naručite <span className="text-primary">naš med</span>?
           </h2>
@@ -24,7 +18,7 @@ const ContactCTA = () => {
           <Button asChild size="lg" className="text-base px-10 py-6 font-body">
             <Link to="/kontakt">Pošaljite poruku</Link>
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

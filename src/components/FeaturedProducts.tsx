@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
@@ -39,13 +38,9 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {displayProducts.map((product, i) => (
-            <motion.div
+          {displayProducts.map((product) => (
+            <div
               key={product.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
               className="glass-card rounded-xl overflow-hidden group hover:shadow-xl transition-shadow"
             >
               <div className="aspect-[4/3] overflow-hidden bg-secondary">
@@ -74,7 +69,7 @@ const FeaturedProducts = () => {
                   </p>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
@@ -39,13 +38,9 @@ const GalleryPage = () => {
         <div className="container mx-auto px-4">
           {displayImages.length > 0 && displayImages[0].image_url ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {displayImages.map((img, i) => (
-                <motion.div
+              {displayImages.map((img) => (
+                <div
                   key={img.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
                   className="aspect-square rounded-xl overflow-hidden cursor-pointer group"
                   onClick={() => setSelectedImage(img.image_url)}
                 >
@@ -54,7 +49,7 @@ const GalleryPage = () => {
                     alt={img.title || "Galerija"}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
           ) : (

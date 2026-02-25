@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -61,12 +60,7 @@ const ContactPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-5xl mx-auto items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-card border border-border rounded-2xl p-8 shadow-lg"
-            >
+            <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">
                 Pošaljite nam <span className="text-primary">poruku</span>
               </h2>
@@ -92,14 +86,9 @@ const ContactPage = () => {
                   {loading ? "Slanje..." : "Pošalji poruku"}
                 </Button>
               </form>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="space-y-6"
-            >
+            <div className="space-y-6">
               <h2 className="font-display text-2xl font-bold text-foreground mb-8">
                 Kontakt <span className="text-primary">informacije</span>
               </h2>
@@ -122,7 +111,7 @@ const ContactPage = () => {
                   </Wrapper>
                 );
               })}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

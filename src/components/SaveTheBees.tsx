@@ -1,15 +1,8 @@
-import { motion } from "framer-motion";
-
 const SaveTheBees = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
-        >
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
             Preuzmimo Odgovornost — <span className="text-primary">Sačuvajmo Pčele</span>
           </h2>
@@ -45,7 +38,7 @@ const SaveTheBees = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

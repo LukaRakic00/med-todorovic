@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Heart, Zap, Shield } from "lucide-react";
 
 const benefits = [
@@ -11,30 +10,18 @@ const HoneyBenefits = () => {
   return (
     <section className="py-24 bg-background section-warm">
       <div className="container mx-auto px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-12"
-        >
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-12">
           Zašto med?
-        </motion.h2>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {benefits.map((b, i) => (
-            <motion.div
-              key={b.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="text-center"
-            >
+          {benefits.map((b) => (
+            <div key={b.title} className="text-center">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4">
                 <b.icon size={28} />
               </div>
               <h3 className="font-display text-xl font-semibold text-foreground mb-2">{b.title}</h3>
               <p className="text-muted-foreground font-body text-sm">{b.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

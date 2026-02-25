@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const BeeKeepingTradition = () => {
   return (
     <section className="py-24 bg-foreground relative overflow-hidden">
@@ -8,12 +6,7 @@ const BeeKeepingTradition = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
-        >
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-cream mb-6">
             25 GODINA BAVLJENJA <span className="text-primary">PČELARSTVOM</span>
           </h2>
@@ -40,7 +33,7 @@ const BeeKeepingTradition = () => {
               i poštovanju prirode koja nas hrani.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

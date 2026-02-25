@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Link } from "react-router-dom";
@@ -28,13 +27,9 @@ const BlogPage = () => {
         <div className="container mx-auto px-4">
           {posts && posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post, i) => (
-                <motion.article
+              {posts.map((post) => (
+                <article
                   key={post.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
                   className="glass-card rounded-xl overflow-hidden"
                 >
                   {post.image_url && (
@@ -51,7 +46,7 @@ const BlogPage = () => {
                       {post.excerpt || post.content.substring(0, 150) + "..."}
                     </p>
                   </div>
-                </motion.article>
+                </article>
               ))}
             </div>
           ) : (
