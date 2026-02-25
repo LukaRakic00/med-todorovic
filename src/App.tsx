@@ -45,6 +45,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <div className="w-full min-w-0 overflow-x-hidden">
         <SEOUpdater />
         <ScrollToTop />
         <Routes>
@@ -65,6 +66,7 @@ const App = () => (
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

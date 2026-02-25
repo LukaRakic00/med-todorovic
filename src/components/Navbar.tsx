@@ -20,8 +20,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/90 backdrop-blur-md border-b border-primary/20">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logoWide} alt="Pčelarstvo Logo" className="h-8 md:h-10" />
+        <Link to="/" className="flex items-center gap-3 min-w-0 shrink">
+          <img src={logoWide} alt="Pčelarstvo Logo" className="h-8 md:h-10 max-w-[180px] md:max-w-none object-contain" />
         </Link>
 
         {/* Desktop */}

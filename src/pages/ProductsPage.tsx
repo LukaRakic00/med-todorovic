@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -39,13 +38,9 @@ const ProductsPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {displayProducts.map((product, i) => (
-              <motion.div
+            {displayProducts.map((product) => (
+              <div
                 key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
                 className="glass-card rounded-xl overflow-hidden group hover:shadow-xl transition-all"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-secondary">
@@ -64,7 +59,7 @@ const ProductsPage = () => {
                     <p className="text-primary font-display text-2xl font-bold">{product.price} RSD</p>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
