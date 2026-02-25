@@ -63,19 +63,17 @@ const Footer = () => {
         </div>
 
         <div className="section-divider mt-12 mb-6" />
-        <div className="text-center space-y-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs text-primary-foreground/50">
+          <p>© {new Date().getFullYear()} Pčelarstvo. Sva prava zadržana.</p>
+          <span className="hidden sm:inline">·</span>
           <a
             href="https://lukarakic.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex flex-col sm:flex-row items-center gap-1 sm:gap-2 px-5 py-3 rounded-xl bg-primary/25 border-2 border-primary/50 text-primary font-display font-bold text-base hover:bg-primary/35 hover:border-primary transition-all"
+            className="hover:text-primary transition-colors"
           >
-            <span>Izrada sajtova — Luka Rakic</span>
-            <span className="text-primary/90 text-sm font-body">lukarakic.dev</span>
+            Sajt izradio Luka Rakić · lukarakic.dev
           </a>
-          <p className="text-xs text-primary-foreground/50">
-            © {new Date().getFullYear()} Pčelarstvo. Sva prava zadržana.
-          </p>
         </div>
       </div>
     </footer>
