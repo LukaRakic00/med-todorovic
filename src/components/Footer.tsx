@@ -63,9 +63,20 @@ const Footer = () => {
         </div>
 
         <div className="section-divider mt-12 mb-6" />
-        <p className="text-center text-xs text-primary-foreground/50">
-          © {new Date().getFullYear()} Pčelarstvo. Sva prava zadržana.
-        </p>
+        <div className="text-center space-y-3">
+          <a
+            href="https://lukarakic.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-col sm:flex-row items-center gap-1 sm:gap-2 px-5 py-3 rounded-xl bg-primary/25 border-2 border-primary/50 text-primary font-display font-bold text-base hover:bg-primary/35 hover:border-primary transition-all"
+          >
+            <span>Izrada sajtova — Luka Rakic</span>
+            <span className="text-primary/90 text-sm font-body">lukarakic.dev</span>
+          </a>
+          <p className="text-xs text-primary-foreground/50">
+            © {new Date().getFullYear()} Pčelarstvo. Sva prava zadržana.
+          </p>
+        </div>
       </div>
     </footer>
   );
