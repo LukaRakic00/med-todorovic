@@ -32,7 +32,7 @@ const ProductsPage = () => {
     <div className="min-h-screen">
       <Navbar />
       <PageHeader
-        title="PROIZVODI OD MEDA"
+        title="Proizvodi od meda"
         subtitle="U našoj ponudi možete pronaći šumski, livadski med i medne mešavine. Medne mešavine pravimo tako što livadskom medu, koji sadrži nektar nekoliko biljaka, dodajemo orašaste plodove, voće, začine i semenke kako bi na prirodan način ojačali vaš imunitet."
       />
       <section className="py-20 bg-background">
