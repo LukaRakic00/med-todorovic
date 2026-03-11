@@ -35,8 +35,8 @@ Dobrodošli u repozitorijum **Pčelarstvo Todorović**! Ova aplikacija omogućav
 - 🔄 **React Query** – Upravljanje server stanjem.
 
 ## **Screenshots**
-![Pčelarstvo Todorović – Početna](/med-todorovic/blob/main/public/png01.png)
-![Pčelarstvo Todorović – Proizvodi](/med-todorovic/blob/main/public/png01.png)
+![Pčelarstvo Todorović – Početna](/public/png01.png)
+![Pčelarstvo Todorović – Proizvodi](/public/png01.png)
 
 ## **Contributions**
 🤝 Slobodno doprinosite! Fork repozitorijum, napravite pull request i zajedno unapređujemo aplikaciju.
