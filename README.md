@@ -36,7 +36,7 @@ Dobrodošli u repozitorijum **Pčelarstvo Todorović**! Ova aplikacija omogućav
 
 ## **Screenshots**
 ![Pčelarstvo Todorović – Početna](/public/png01.png)
-![Pčelarstvo Todorović – Proizvodi](/public/png01.png)
+![Pčelarstvo Todorović – Proizvodi](/public/png02.png)
 
 ## **Contributions**
 🤝 Slobodno doprinosite! Fork repozitorijum, napravite pull request i zajedno unapređujemo aplikaciju.
